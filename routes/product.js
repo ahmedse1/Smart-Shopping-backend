@@ -3,11 +3,13 @@ const express = require("express"),
 
 var upload = require("../middleware/imageUpload");
 var addProduct = require("../controller/product/addProduct");
+var editProduct = require("../controller/product/editProduct");
 var getProducts = require("../controller/product/getProducts");
 var deleteProduct = require("../controller/product/deleteProduct");
 const increaseQuantity = require("../controller/product/increaseQuantity");
 
 router.post("/", addProduct);
+router.post("/:id", editProduct);
 router.get("/:id", getProducts);
 router.delete("/", deleteProduct);
 router.put("/", increaseQuantity);

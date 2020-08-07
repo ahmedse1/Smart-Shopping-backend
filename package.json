@@ -4,7 +4,9 @@
   "description": "Test",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "server": "nodemon index.js",
+    "client": "(cd .. && cd Smart-Shopping-frontend) && npm run start",
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
